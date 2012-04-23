@@ -1,0 +1,34 @@
+//****************************************************************************
+// ActionScript Standard Library
+// NetStream object
+//****************************************************************************
+
+intrinsic class NetStream
+{
+	var bufferLength:Number;
+	var bufferTime:Number;
+	var bytesLoaded:Number;
+	var bytesTotal:Number;
+	var currentFps:Number;
+	var liveDelay:Number;
+	var time:Number;
+	
+	function NetStream(connection:NetConnection);
+	
+	function attachAudio(theMicrophone:Microphone):Void;
+	function attachVideo(theCamera:Camera,snapshotMilliseconds:Number):Void;
+	function close():Void;
+	function pause(flag:Boolean):Void;
+	function play(name:Object, start:Number, len:Number, reset:Object);
+	function publish(name:Object, type:String):Void;
+	function receiveAudio(flag:Boolean):Void;
+	function receiveVideo(flag:Object):Void;
+	function seek(offset:Number):Void;
+	function send(handlerName:String):Void;
+	function setBufferTime(bufferTime:Number);
+	
+	function onResult(streamId:Number);
+	function onStatus(info:Object):Void;
+}
+
+
