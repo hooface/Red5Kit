@@ -1,0 +1,14 @@
+ActionScript2 Compiling Kit
+=====================================
+This is a basic AS2 compiler package. 
+Compiler included is for OSX, but the compiler website has binaries for Windows and Linux platforms as well.
+
+Package includes:
+* MTASC 1.12 for OSX
+  http://www.mtasc.org/
+* Macromedia Flash MX 2004 libraries
+
+Examples (OSX)
+=====================================
+> export PATH=/CompileAS2/bin:/CompileAS2/mx2004/First Run/Classes:$PATH
+> ./mtasc -cp "." -swf yourApplication.swf -mx com/example/Main.as -v
